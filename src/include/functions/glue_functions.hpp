@@ -18,6 +18,10 @@ TableFunction GetGlueGetTableResponseFunction();
 //! parameters as columns and the complete Glue Database object as VARIANT.
 TableFunction GetGlueGetDatabaseResponseFunction();
 
+//! glue_show_columns('<catalog>.<schema>.<table>'): the column names of a table of an attached Glue catalog, one row
+//! per column (data columns first, partition keys last). Works on any table format.
+TableFunction GetGlueShowColumnsFunction();
+
 //! glue_partitions('<catalog>.<schema>.<table>'): the partitions of a Hive table as registered in Glue, one row
 //! per partition with a typed column per partition key and the partition's location
 TableFunction GetGluePartitionsFunction();
